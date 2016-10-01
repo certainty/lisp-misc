@@ -1,0 +1,8 @@
+#!/bin/sh
+# find sake file
+
+#add code to find sakefile upwarts
+
+sakefile="test.sake"
+
+csi -R sake-tasks -nqb -e "(load \"${sakefile}\") (sake-main)"

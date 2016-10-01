@@ -1,0 +1,9 @@
+(define version "0.0.1")
+
+(compile -d0 -O2 -J -s sake-tasks.scm)
+(compile -d0 -O2 -s sake-tasks.import.scm)
+
+(install-extension
+ 'sake-tasks
+ '("sake-tasks.so" "sake-tasks.import.so")
+ `((version ,version)))

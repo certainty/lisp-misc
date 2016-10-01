@@ -1,0 +1,6 @@
+((synopsis "Run tasks")
+ (author "David Krentzlin")
+ (category misc)
+ (license "BSD")
+ (depends)
+ (test-depends test))

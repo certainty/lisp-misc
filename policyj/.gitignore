@@ -1,0 +1,12 @@
+repl-port
+
+\#*
+.\#*
+.lein-*
+target/*
+*.log
+conf/server.conf
+conf/server.conf.local
+.nrepl*
+
+log/*

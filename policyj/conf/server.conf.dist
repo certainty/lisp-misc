@@ -1,0 +1,60 @@
+{
+  ;; Where shall the server listen
+  :server {
+    :address "127.0.0.1"
+    :port 1234
+    :backlog 800
+  }
+
+  ;; Configure the connection you
+  ;; want to use to monitor the server.
+  ;; It provides statistics about the work
+  :monitoring{
+    :address "127.0.0.1"
+    :port 1338
+  }
+
+  ;; There are currently 3 supported types
+  ;; of policies
+  :policies {
+      ;; The whitelist reads the whitelist from the database given
+      ;; Note: the lists are read from the database on a regular basis
+      ;;       and cached in memory to do the actual lookup. This
+      ;;       makes the daemon more resiliant to failing connections to the database.
+      :db-whitelist {
+        ;; refresh cache every 10 minutes
+        ;; move this to the whitelist/blacklist part
+        :cache-lifetime 10
+        :authorative-source {
+          :username ""
+          :password ""
+          :port     3306
+          :host     "mysql.example.com"
+          :database "whitelist"
+        }
+      }
+
+      ;; The blacklist reads the blacklist from the database given
+      ;; Note: the lists are read from the database on a regular basis
+      ;;       and cached in memory to do the actual lookup. This
+      ;;       makes the daemon more resiliant to failing connections to the database.
+      :db-blacklist {
+        ;; refresh cache every 10 minutes
+        ;; move this to the whitelist/blacklist part
+        :cache-lifetime 10
+        :authorative-source {
+          :username ""
+          :password ""
+          :port     3306
+          :host     "mysql.example.com"
+          :database "blacklist"
+        }
+      }
+
+    ;; The DNS blacklist policy uses DNSBL to decide which hosts to block
+    ;; Just add the DNSBL services you want to use
+    :dns-blacklist {
+      :services [ "b.barracudacentral.org", "ix.dnsbl.manitu.net" ]
+    }
+  }
+}
