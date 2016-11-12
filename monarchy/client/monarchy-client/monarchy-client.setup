@@ -1,0 +1,7 @@
+(compile -d0 -O2 -J -s monarchy-client.scm)
+(compile -d0 -O2 -s monarchy-client.import.scm)
+
+(install-extension
+ 'monarchy-client
+ '("monarchy-client.so" "monarchy-client.import.so")
+ '((version "0.0.1")))

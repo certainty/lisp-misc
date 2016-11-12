@@ -1,0 +1,22 @@
+{
+
+ :server {
+   :address "127.0.0.1"
+   :port 8080
+ }
+
+ :samples {}
+
+ :auth {
+   :username "bob"
+   :password "secret"
+ }
+  :messaging {
+   :broker-type :rabbitmq
+   :broker      "localhost"
+   :username    "guest"
+   :password    "guest"
+   :topic       "monarchy"
+ }
+
+}

@@ -1,0 +1,17 @@
+
+(compile -s -O2 -d0 procter.scm -j procter)
+(compile -s -O2 -d0 procter.import.scm)
+
+(compile -s -O2 -d0 system-peep.scm -j system-peep)
+(compile -s -O2 -d0  system-peep.import.scm)
+
+(install-extension
+  'procter
+  '("procter.import.so" "procter.so")
+  '((version 0.1)))
+
+(install-extension
+  'system-peep
+  '("system-peep.import.so" "system-peep.so")
+  '((version 0.1)))
+

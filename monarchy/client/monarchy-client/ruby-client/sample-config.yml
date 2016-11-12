@@ -1,0 +1,4 @@
+fqdn: "example.org"
+uuid: "3f013bb0-95ae-4396-8c06-3c622bea8cf4"
+samples:
+  uri: "http://localhost:30000/v1/samples"

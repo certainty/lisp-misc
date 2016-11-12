@@ -1,0 +1,31 @@
+* Make the main server rest-ful
+** this is easy to do and works well 
+** nice to debug
+** fast anough?
+
+* Client
+** add a commandline app that can be used by custom sensors and encapsulates the communication with the server
+   
+* Security
+** don't add things like ssl and clientside certs into the application but make it rather opt in via for example nginx 
+** this speeds up the development process much as we can concentrate on the actual functionality
+** we would add a section about how secure communication might look like in the docs
+
+* Random thoughts
+** Consumer can feed back events into the event-bus so that they can trigger new events
+** On nodes run Agents which deliver sensor-data and Actors which can be used to execute something
+   for example as a result to events processed by the rule engine
+** How do we add more checks to agents?
+** Authentication scheme
+   Implement an authentication scheme with certificates ala puppet?
+** Multiple Headquarters
+   This only works if we open a socket per head-quarter.
+   Multiple connects to the same socket won't work as they would be round-robined
+
+
+
+
+* messagebus
+** Make send-message handle non-blocking io properly
+** make the messagebus configurable (zmq, redis, rabbit-mq) just add an api wrapper and start with what is the easiest to do
+** 

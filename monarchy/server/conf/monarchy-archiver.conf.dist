@@ -1,0 +1,11 @@
+{
+
+  :messaging {
+   :broker-type :rabbitmq
+   :broker      "localhost"
+   :username    "guest"
+   :password    "guest"
+   :topic       "monarchy"
+ }
+
+}

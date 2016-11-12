@@ -1,0 +1,6 @@
+((synopsis "little bridge to generate monarchy events from nrpe")
+ (author "David Krentzlin")
+ (category misc)
+ (license "GPL")
+ (depends comparse)
+ (test-depends test))

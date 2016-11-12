@@ -1,0 +1,8 @@
+((synopsis "client for the monarchy monitoring system")
+ (author "David Krentzlin")
+ (category misc)
+ (license "GPL")
+ ;(depends http-client edn)
+ (depends http-client log5scm simple-configuration intarweb json)
+ (test-depends test)
+ (foreign-depends))

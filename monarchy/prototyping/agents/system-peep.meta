@@ -1,0 +1,8 @@
+((egg "system-peep.egg")
+ (author "David Krentzlin")
+ (synopsis "system information")
+ (category os)
+ (license "MIT")
+ (depends srfi-69)
+ (test-depends test)
+ (files ".hgignore" "system-peep.meta" "system-peep.scm" "system-peep.setup" "procter.scm"))

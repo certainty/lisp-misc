@@ -1,0 +1,7 @@
+(compile -d0 -O2 -J -s nrpe2monarchy.scm)
+(compile -d0 -O2 -s nrpe2monarchy.import.scm)
+
+(install-extension
+ 'nrpe2monarchy
+ '("nrpe2monarchy.so" "nrpe2monarchy.import.so")
+ '((version "0.0.1")))
